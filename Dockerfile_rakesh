@@ -1,0 +1,18 @@
+FROM alpine
+WORKDIR /tmp
+RUN apk update && apk add git && apk add tar zip
+RUN echo "thankyou" > test.txt && echo "welcome" > test1.txt
+RUN mkdir example && mv test.txt example && mv test1.txt example
+RUN tar -cvzf example.tar.gz example
+CMD [ "alpine" ]
+
+# FROM ubuntu
+# WORKDIR /tmp
+# RUN apt update && \
+#     apt install -y zip tar git && \
+#     echo "welcome" > test.txt && \
+#     echo "thankyou" > test1.txt && \
+#     mkdir example && \
+#     mv test.txt example && \
+#     mv test1.txt example && \
+#     tar -cvf example.tar.gz example
