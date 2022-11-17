@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+    jenkins:
+     image: jenkins/jenkins:2.361.4-lts
+     container_name: jenkins_container
+     ports:
+       - "8080:8080"
+     volumes:
+        - 'JENKINS_HOME:/var/jenkins_home'
+
+volumes:
+  JENKINS_HOME: {}
