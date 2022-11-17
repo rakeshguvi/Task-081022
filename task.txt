@@ -1,2 +1,0 @@
-docker.io/rakeshguvi/demo_test
-sha256:7f1fb8c51147d691200eeab6e64c95b9dece8e6e01f3bb64bdae173a969255c0
